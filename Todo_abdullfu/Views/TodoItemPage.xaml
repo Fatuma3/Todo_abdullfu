@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todo_abdullfu.Views.TodoListPage"
+             Title="Your To-do List"
+             BackgroundColor="DarkCyan">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="OnItemAdded">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="Android, UWP" Value="Plus.png" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Frame BackgroundColor="LightCyan" CornerRadius="10" Margin="0,0,0,10">
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Name}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            <Image Source="box.png" HorizontalOptions="EndAndExpand" Margin="0,5,5,0" />
+                            <Image Source="check.jpg" HorizontalOptions="EndAndExpand" IsVisible="{Binding Done}" Margin="0,5,5,0"/>
+                        </StackLayout>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

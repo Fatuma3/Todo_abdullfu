@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todo_abdullfu.Views.TodoItemPage"
+             Title="{Binding Name}" >
+
+    <StackLayout BackgroundColor="DarkCyan">
+        <Grid Margin="20"
+      VerticalOptions="StartAndExpand" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Text=" Task"/>
+        <Entry Grid.Row="1" Text="{Binding Name}" Placeholder="Enter Your Task" />
+        <Label Grid.Row="2" Text="Task Details" />
+        <Entry Grid.Row="3" Text="{Binding Notes}" Placeholder="Enter Your Task Details "/>
+        <Label Grid.Row="4" Text="Is it Complete?" />
+        <Switch Grid.Row="4" IsToggled="{Binding Done}"/>
+
+        <StackLayout Grid.Row="6" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Button Text="Add"
+                Clicked="OnSaveClicked" 
+                BackgroundColor="ForestGreen"
+                WidthRequest="175"/>
+
+            <Button Text="Delete"
+                Clicked="OnDeleteClicked" 
+                BackgroundColor="DarkRed"
+                WidthRequest="175"/>
+        </StackLayout>
+        <Button Text="Cancel"
+                Grid.Row="7"
+                Clicked="OnCancelClicked" 
+                BackgroundColor="Black"/>
+        </Grid>
+
+
+    
+ 
+    </StackLayout>
+</ContentPage>

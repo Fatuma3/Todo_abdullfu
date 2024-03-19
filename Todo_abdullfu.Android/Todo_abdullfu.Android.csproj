@@ -100,10 +100,10 @@
     <AndroidResource Include="Resources\drawable\Plus.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\check.jpg" />
+    <AndroidResource Include="Resources\drawable\box.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\box.png" />
+    <AndroidResource Include="Resources\drawable\check2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

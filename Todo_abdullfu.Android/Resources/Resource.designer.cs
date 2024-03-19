@@ -16520,7 +16520,7 @@ namespace Todo_abdullfu.Droid
 			public const int btn_radio_on_to_off_mtrl_animation = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int check = 2131165280;
+			public const int check2 = 2131165280;
 			
 			// aapt resource value: 0x7F070061
 			public const int design_fab_background = 2131165281;

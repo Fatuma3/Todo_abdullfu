@@ -15,19 +15,25 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
-        <ListView.ItemTemplate>
+    <ListView x:Name="listView"
+              Margin="20"
+              ItemSelected="OnListItemSelected">
+        <ListView.ItemTemplate >
             <DataTemplate>
                 <ViewCell>
-                    <Frame BackgroundColor="LightCyan" CornerRadius="10" Margin="0,0,0,10">
-                        <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Name}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                            <Image Source="box.png" HorizontalOptions="EndAndExpand" Margin="0,5,5,0" />
-                            <Image Source="check.jpg" HorizontalOptions="EndAndExpand" IsVisible="{Binding Done}" Margin="0,5,5,0"/>
-                        </StackLayout>
-                    </Frame>
+                    <StackLayout Margin="20,0,0,0"
+                                 Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding Name}"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand" />
+                        <Image Source="check2.png"
+                               HorizontalOptions="End"
+                               IsVisible="{Binding Done}" />
+                    </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
 </ContentPage>
+

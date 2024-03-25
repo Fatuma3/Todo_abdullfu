@@ -17,22 +17,57 @@
 
     <ListView x:Name="listView"
               Margin="20"
-              ItemSelected="OnListItemSelected">
+              BackgroundColor="Transparent"
+              ItemSelected="OnListItemSelected"
+              SeparatorVisibility="None"
+              SeparatorColor="AliceBlue"
+              HasUnevenRows="True">
         <ListView.ItemTemplate >
-            <DataTemplate>
+            
+            <DataTemplate >
                 <ViewCell>
-                    <StackLayout Margin="20,0,0,0"
-                                 Orientation="Horizontal"
-                                 HorizontalOptions="FillAndExpand">
-                        <Label Text="{Binding Name}"
-                               VerticalTextAlignment="Center"
-                               HorizontalOptions="StartAndExpand" />
-                        <Image Source="check2.png"
-                               HorizontalOptions="End"
-                               IsVisible="{Binding Done}" />
-                    </StackLayout>
+                    <Grid Padding="10"
+                          HorizontalOptions="FillAndExpand">
+                        <Frame
+                            HasShadow="True"
+                             WidthRequest="15" 
+                            HeightRequest="15">
+                                   
+                            
+                            <StackLayout Spacing="0" Orientation="Horizontal">
+                               
+                                <Image Source="bullet.png"
+                                    HorizontalOptions="Start"
+                                    WidthRequest="15"
+                                       Margin="-10,2,2,0"/>
+
+
+                                
+                                <StackLayout>
+                                        <Label Text="{Binding Name}"
+                                               VerticalTextAlignment="Center"
+                                               FontSize="Small"
+                                               FontAttributes="Bold"
+                                              HorizontalOptions="StartAndExpand"
+                                               HorizontalTextAlignment="Center" 
+                                               TextColor="Black"
+                                              
+                                         />  
+                                </StackLayout>
+
+                                <Image Source="check2.png"
+                                    HorizontalOptions="EndAndExpand"
+                                    VerticalOptions="Center"
+                                    IsVisible="{Binding Done}" 
+                                    WidthRequest="20"
+                                    
+                                    />
+                            </StackLayout>
+                         </Frame> 
+                    </Grid>
                 </ViewCell>
             </DataTemplate>
+         
         </ListView.ItemTemplate>
     </ListView>
 </ContentPage>

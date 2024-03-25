@@ -40,7 +40,8 @@ namespace Todo_abdullfu.Views
                 await Navigation.PushAsync(new TodoItemPage
                 {
                     BindingContext = e.SelectedItem as TodoItem
-                });
+                   
+            });
             }
         }
     }
